@@ -1,0 +1,27 @@
+{
+  "name": "elasticsearch-client",
+  "version": "0.0.1",
+  "description": "Crawler in nodejs for using from splunk because python is problem",
+  "engines": {
+    "node": ">=0.10.20"
+  },
+  "author": {
+    "name": "ozlevka"
+  },
+  "dependencies": 
+  {
+    "request" : "*",
+    "async" : "*"
+  },
+  "devDependencies": {
+          "nodeunit": ">=0.6.4"
+  },
+  
+  "main": "./index.js",
+  "licenses": [
+    {
+      "type": "MIT License",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
+}
