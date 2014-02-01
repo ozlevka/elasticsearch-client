@@ -1,7 +1,7 @@
 var elastic = require('../lib/elasticclient');
 
 debugger;
-var client = new elastic.ElasticClient();
+var client = new elastic.ElasticClient({index:"hello"});
 
 
 exports.testConnect = function(test)
@@ -52,6 +52,6 @@ exports.createstatusdelete = {
 	 		test.done();
 	 	});
 	 }
-}
+};
 
 
