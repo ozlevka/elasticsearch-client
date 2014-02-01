@@ -14,7 +14,7 @@
     "async" : "*"
   },
   "devDependencies": {
-          "nodeunit": ">=0.6.4"
+        
   },
   
   "main": "./index.js",
