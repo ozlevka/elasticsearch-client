@@ -1,1 +1,1 @@
-require('./lib/elasticclient')
+module.exports = require('./lib/elasticclient');
