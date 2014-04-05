@@ -5,21 +5,18 @@ var request = require('request');
 
 
 var client = new elastic.ElasticClient({
-
-    index : 'jobmails',
-	type : 'cvmail'
+    host : "10.90.11.157",
+    index : 'ankortwitter',
+	type : 'twit'
 });
 
-var columns = ['attachment'];
-var values = ['רווקה'];
+function indexStatusTest() {
+    client.indexStatus(function(err, results) {
+        if(err) console.error(err);
+        else console.log(results);
+    });
+}
 
-client.urlSearch(columns, values, function(err, results) {
-    if(err) {
-        console.error(err);
-    }
-    else {
-        console.log(results);
-    }
-});
+indexStatusTest();
 
 
