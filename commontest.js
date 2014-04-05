@@ -53,8 +53,31 @@ function runAggregateQuery() {
     });
 }
 
-runAggregateQuery();
-//runQueryTest();
+
+function runQueryWithoutTypeTest() {
+    var query = {
+        "from" : 0,
+        "size" : 1,
+        "facets" :{
+            "types" : {
+                "terms" : {"field" : "_type"}
+            }
+        }
+    };
+
+
+    client.runQuery(query, {
+       avoid_type : true,
+       index : 'barevent'
+    }, function(err, results){
+        if(err) console.error(err);
+        else console.log(results);
+    });
+}
+
+//runQueryWithoutTypeTest();
+//runAggregateQuery();
+runQueryTest();
 //indexStatusTest();
 
 
