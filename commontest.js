@@ -5,7 +5,8 @@ var request = require('request');
 
 
 var client = new elastic.ElasticClient({
-	index : 'jobmails',
+
+    index : 'jobmails',
 	type : 'cvmail'
 });
 
